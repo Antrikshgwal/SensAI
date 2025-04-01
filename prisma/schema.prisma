@@ -20,7 +20,7 @@ email           String      @unique
 name            String?
 imageURL        String?
 industry        String? // combined industry-subindustry
-industryInsights IndustryInsight? @relation(fields: [industry], references: [industry])
+industryInsight IndustryInsight? @relation(fields: [industry], references: [industry])
 createdAt       DateTime    @default(now())
 updatedAt       DateTime    @updatedAt
 
