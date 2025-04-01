@@ -1,13 +1,19 @@
-import React from 'react'
+import Link from "next/link";
 
+export default async function EditCoverLetterPage({ params }) {
+  const { id } = await params;
 
-export default async function CoverLetterPage ({params})  {
-    const {id} = await params;
   return (
-    <div>
-<h1>Cover letter :{id}</h1>
+    <div className="container mx-auto py-6">
+      <div className="flex flex-col space-y-2">
+
+
+        <h1 className="text-6xl font-bold mb-6">
+         Cover Letter ID: {id}
+        </h1>
+      </div>
+
+
     </div>
-  )
+  );
 }
-
-
