@@ -62,7 +62,7 @@ className='h-20 py-1 w-auto object-contain'/>
       <span>Interview</span>
       </Link>
     </DropdownMenuItem>
-    <DropdownMenuItem>Subscription</DropdownMenuItem>
+    
   </DropdownMenuContent>
 </DropdownMenu>
 </SignedIn>

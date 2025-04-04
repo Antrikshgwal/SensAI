@@ -15,7 +15,7 @@ export async function generateQuiz() {
     where: { clerkUserID: userId },
     select: {
       industry: true,
-      skills: true,
+      Skills: true,
     },
   });
 
@@ -25,7 +25,7 @@ export async function generateQuiz() {
     Generate 10 technical interview questions for a ${
       user.industry
     } professional${
-    user.skills?.length ? ` with expertise in ${user.skills.join(", ")}` : ""
+    user.Skills?.length ? ` with expertise in ${user.Skills.join(", ")}` : ""
   }.
 
     Each question should be multiple choice with 4 options.
@@ -79,7 +79,7 @@ export async function saveQuizResult(questions, answers, score) {
   const wrongAnswers = questionResults.filter((q) => !q.isCorrect);
 
   // Only generate improvement tips if there are wrong answers
-  let improvementTip = null;
+  let ImprovementTips = null;
   if (wrongAnswers.length > 0) {
     const wrongQuestionsText = wrongAnswers
       .map(
@@ -102,22 +102,22 @@ export async function saveQuizResult(questions, answers, score) {
     try {
       const tipResult = await model.generateContent(improvementPrompt);
 
-      improvementTip = tipResult.response.text().trim();
-      console.log(improvementTip);
+      ImprovementTips = tipResult.response.text().trim();
+      console.log(ImprovementTips);
     } catch (error) {
       console.error("Error generating improvement tip:", error);
       // Continue without improvement tip if generation fails
     }
   }
-
+  const questionResultStringArray = questionResults.map((q) => JSON.stringify(q));
   try {
     const assessment = await db.assessment.create({
       data: {
         userId: user.id,
         quizScore: score,
-        questions: questionResults,
+        questions: questionResultStringArray,
         category: "Technical",
-        improvementTip,
+        ImprovementTips,
       },
     });
 

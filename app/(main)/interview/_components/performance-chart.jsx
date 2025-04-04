@@ -35,7 +35,7 @@ export default function PerformanceChart({ assessments }) {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="gradient-title text-3xl md:text-4xl">
+        <CardTitle className=" text-3xl md:text-4xl">
           Performance Trend
         </CardTitle>
         <CardDescription>Your quiz scores over time</CardDescription>
@@ -67,7 +67,7 @@ export default function PerformanceChart({ assessments }) {
               <Line
                 type="monotone"
                 dataKey="score"
-                stroke="hsl(var(--primary))"
+                stroke="#8884d8"
                 strokeWidth={2}
               />
             </LineChart>
