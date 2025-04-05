@@ -52,22 +52,22 @@ export default function Home() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6  max-w-6xl mx-auto">
             <div className="flex flex-col items-center justify-center space-y-2">
-              <h3 className="text-4xl font-bold">W-Rizz</h3>
+              <h3 className="text-4xl font-bold">50+</h3>
               <p className="text-muted-foreground text-center flex flex-col  ">
-                Lookmaxxing sessions
+                industries covered
               </p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
-              <h3 className="text-4xl font-bold">OG Grit</h3>
-              <p className="text-muted-foreground">Jerkmate 1v1 Challenges</p>
+              <h3 className="text-4xl font-bold">1000+</h3>
+              <p className="text-muted-foreground">interview questions</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
-              <h3 className="text-4xl font-bold">Gooning</h3>
-              <p className="text-muted-foreground">To Lebron</p>
+              <h3 className="text-4xl font-bold">95%</h3>
+              <p className="text-muted-foreground">Success rate</p>
             </div>
             <div className="flex flex-col items-center justify-center space-y-2">
               <h3 className="text-4xl font-bold">24/7</h3>
-              <p className="text-muted-foreground">E-thot support</p>
+              <p className="text-muted-foreground">AI support</p>
             </div>
           </div>
         </div>
